@@ -164,7 +164,31 @@ function factorial(number) {
   return result;
 }
 
-
-console.log(factorial(5)); 
+console.log(factorial(5));
 console.log(factorial(1));
 console.log(factorial(7));
+
+// Problem 10
+function pingPong(number) {
+  if (typeof number !== "number" || number < 0) {
+    return "Invalid input";
+  }
+
+  let output = [];
+
+  for (let i = 1; i <= number; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      output.push("PingPong");
+    } else if (i % 3 === 0) {
+      output.push("Ping");
+    } else if (i % 5 === 0) {
+      output.push("Pong");
+    } else {
+      output.push(i);
+    }
+  }
+
+  return output.join(",");
+}
+
+console.log(pingPong(20));
