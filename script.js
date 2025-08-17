@@ -149,3 +149,22 @@ function capitalizeFirstLetter(string) {
 console.log(capitalizeFirstLetter("hello world"));
 console.log(capitalizeFirstLetter("programming hero"));
 console.log(capitalizeFirstLetter("md rakiful islam joy"));
+
+// Problem 9
+function factorial(number) {
+  if (typeof number !== "number" || number < 0) {
+    return "Invalid input";
+  }
+
+  let result = 1;
+  for (let i = 1; i <= number; i++) {
+    result = result * i;
+  }
+
+  return result;
+}
+
+
+console.log(factorial(5)); 
+console.log(factorial(1));
+console.log(factorial(7));
