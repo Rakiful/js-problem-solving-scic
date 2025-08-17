@@ -100,11 +100,30 @@ function sumOfAllNumber(array) {
 
   let total = 0;
   for (let i = 0; i < array.length; i++) {
-    total = total + array[i] ;
+    total = total + array[i];
   }
 
   return total;
 }
 
 console.log(sumOfAllNumber([5, 1, 6, 9, 3, 5, 5, 6, 6]));
-console.log(sumOfAllNumber([5,10,0.3]));
+console.log(sumOfAllNumber([5, 10, 0.3]));
+
+// Problem 7
+function findEvenNumber(array) {
+  if (!Array.isArray(array)) {
+    return "Invalid input";
+  }
+
+  let newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      newArray.push(array[i]);
+    }
+  }
+
+  return newArray;
+}
+
+console.log(findEvenNumber([1, 2, 3, 4, 5, 6, 7, 8]));
+console.log(findEvenNumber([ 44, 21, 16, 77, 12]));
