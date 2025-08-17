@@ -1,4 +1,3 @@
-
 // Problem 1
 function reverseString(string) {
   if (typeof string !== "string") {
@@ -21,7 +20,7 @@ function countVowels(string) {
     return "Invalid input";
   }
 
-  let string2 = string.toLowerCase()
+  let string2 = string.toLowerCase();
   let vowels = "aeiou";
   let count = 0;
 
@@ -34,10 +33,8 @@ function countVowels(string) {
   return count;
 }
 
-
 console.log(countVowels("programming hero"));
 console.log(countVowels("rakiful"));
-
 
 // Problem 3
 function isPalindrome(string) {
@@ -49,13 +46,12 @@ function isPalindrome(string) {
   for (let i = string.length - 1; i >= 0; i--) {
     reversed = reversed + string[i];
   }
-  return reversed === string ;
+  return reversed === string;
 }
 
 console.log(isPalindrome("madam"));
-console.log(isPalindrome("hello")); 
+console.log(isPalindrome("hello"));
 console.log(isPalindrome("wow"));
-
 
 // Problem 4
 function findMaximumNumber(array) {
@@ -76,3 +72,22 @@ function findMaximumNumber(array) {
 console.log(findMaximumNumber([5, 1, 9, 3]));
 console.log(findMaximumNumber([10, 20, 7]));
 console.log(findMaximumNumber([-3, -7, -1]));
+
+// Problem 5
+function removeDuplicate(array) {
+  if (!Array.isArray(array) || array.length === 0) {
+    return "Invalid input";
+  }
+
+  let newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (!newArray.includes(array[i])) {
+      newArray.push(array[i]);
+    }
+  }
+
+  return newArray;
+}
+
+console.log(removeDuplicate([5, 1, 6, 9, 3, 5, 5, 6, 6]));
+console.log(removeDuplicate([2, 2, 3, 5, 5, 6]));
