@@ -37,3 +37,21 @@ function countVowels(string) {
 
 console.log(countVowels("programming hero"));
 console.log(countVowels("rakiful"));
+
+
+// Problem 3
+function isPalindrome(string) {
+  if (typeof string !== "string") {
+    return "Invalid input";
+  }
+
+  let reversed = "";
+  for (let i = string.length - 1; i >= 0; i--) {
+    reversed = reversed + string[i];
+  }
+  return reversed === string ;
+}
+
+console.log(isPalindrome("madam"));
+console.log(isPalindrome("hello")); 
+console.log(isPalindrome("wow"));
