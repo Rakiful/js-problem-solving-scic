@@ -126,4 +126,26 @@ function findEvenNumber(array) {
 }
 
 console.log(findEvenNumber([1, 2, 3, 4, 5, 6, 7, 8]));
-console.log(findEvenNumber([ 44, 21, 16, 77, 12]));
+console.log(findEvenNumber([44, 21, 16, 77, 12]));
+
+//Problem 8
+function capitalizeFirstLetter(string) {
+  if (typeof string !== "string") {
+    return "Invalid input";
+  }
+
+  let words = string.split(" ");
+  for (let i = 0; i < words.length; i++) {
+    let firstLetter = words[i].charAt(0).toUpperCase();
+    let restLetter = words[i].slice(1);
+    words[i] = firstLetter + restLetter;
+  }
+
+  let newString = words.join(" ");
+
+  return newString;
+}
+
+console.log(capitalizeFirstLetter("hello world"));
+console.log(capitalizeFirstLetter("programming hero"));
+console.log(capitalizeFirstLetter("md rakiful islam joy"));
