@@ -55,3 +55,24 @@ function isPalindrome(string) {
 console.log(isPalindrome("madam"));
 console.log(isPalindrome("hello")); 
 console.log(isPalindrome("wow"));
+
+
+// Problem 4
+function findMaximumNumber(array) {
+  if (!Array.isArray(array) || array.length === 0) {
+    return "Invalid input";
+  }
+
+  let maxNumber = array[0];
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] > maxNumber) {
+      maxNumber = array[i];
+    }
+  }
+
+  return maxNumber;
+}
+
+console.log(findMaximumNumber([5, 1, 9, 3]));
+console.log(findMaximumNumber([10, 20, 7]));
+console.log(findMaximumNumber([-3, -7, -1]));
