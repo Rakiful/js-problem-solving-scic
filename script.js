@@ -91,3 +91,20 @@ function removeDuplicate(array) {
 
 console.log(removeDuplicate([5, 1, 6, 9, 3, 5, 5, 6, 6]));
 console.log(removeDuplicate([2, 2, 3, 5, 5, 6]));
+
+// Problem 6
+function sumOfAllNumber(array) {
+  if (!Array.isArray(array)) {
+    return "Invalid input";
+  }
+
+  let total = 0;
+  for (let i = 0; i < array.length; i++) {
+    total = total + array[i] ;
+  }
+
+  return total;
+}
+
+console.log(sumOfAllNumber([5, 1, 6, 9, 3, 5, 5, 6, 6]));
+console.log(sumOfAllNumber([5,10,0.3]));
